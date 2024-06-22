@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+}
+
+.supergrid {
+    display: grid;
+    grid-template-areas: "hero hero"
+        "menu1 menu2"
+        "main main"
+        "formacion formacion"
+        "proyectos proyectos"
+        "contacto contacto"
+        "foot foot";
+
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 90vh 10vh auto auto auto 100vh 10vh;
+}
+
+/*SECCIÓN HERO*/
+
+.hero-section {
+    grid-area: hero;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vw;
+    color: white;
+}
+
+.hero-section h1 {
+    color: white;
+    backdrop-filter: blur(3px);
+    text-shadow: 1px 2px 12px rgba(0, 0, 0, 0.6);
+    position: absolute;
+}
+
+.hero-section video {
+    width: 100%;
+    flex: 100%;
+    object-fit: cover;
+
+}
+
+/*SECCIÓN NAVBAR*/
+
+.navbar1 {
+    grid-area: menu1;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    position: sticky;
+    top: 0.0;
+
+}
+
+.navbar2 {
+    grid-area: menu2;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    list-style: none;
+    position: sticky;
+    top: 0;
+}
+
+li {
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+li:hover {
+    background-color: blue;
+}
+
+.imagen_nav {
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.imagen_nav:hover {
+    background-color: blue;
+}
+
+/*SECCIÓN ABOUT ME*/
+
+.about {
+    grid-area: main;
+    background: rgb(0, 7, 63);
+    background: linear-gradient(110deg, rgba(0, 7, 63, 0.9596171232164741) 50%, rgba(0, 24, 255, 1) 100%);
+    color: beige;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 3.5rem;
+    margin: 2rem;
+}
+
+.about_card {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_img {
+    width: 40vw;
+    object-fit: cover;
+    padding: 1rem;
+    margin: 0 0 0 4rem;
+    border-radius: 50%;
+}
+
+.about p {
+    padding: 2rem;
+    border: 2rem;
+    margin: 2rem;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+.habilidades, .blandas, .pasatiempos {
+    display: grid;
+    grid-template-columns: repeat(4, 20vw);
+    justify-content: center;
+    height: 50vh;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.habilidad_carta, .pasatiempos_carta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.habilidad_img, .pasatiempo_img {
+    width: 55%;
+    object-fit: cover;
+}
+
+/*SECCIÓN FORMACIÓN*/
+
+.formacion {
+    grid-area: formacion;
+    background: rgb(0, 7, 63);
+    background: linear-gradient(310deg, rgba(0, 7, 63, 0.9596171232164741) 50%, rgba(0, 24, 255, 1) 100%);
+    color: beige;
+    width: 100%;
+    padding: 2rem 0;
+    min-width: auto;
+}
+
+.formacion_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 20px;
+}
+
+.formacion_carta {
+    width: 80%;
+    height: auto;
+    margin: 2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.formacion_img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.formacion_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+/*SECCIÓN PROYECTOS*/
+.proyecto {
+    grid-area: proyectos;
+    background: rgb(0, 7, 63);
+    background: linear-gradient(110deg, rgba(0, 7, 63, 0.9596171232164741) 50%, rgba(0, 24, 255, 1) 100%);
+    color: white;
+}
+
+.proyecto_izq {
+    display: flex;
+    width: 90vw;
+    height: 60vh;
+    padding: 2rem;
+    margin: 0 auto;
+    justify-content: flex-start;
+}
+
+.proyecto_der {
+    display: flex;
+    width: 90vw;
+    height: 60vh;
+    padding: 2rem;
+    margin: 0 auto;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+
+.proyecto_img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    padding: 2rem;
+}
+
+.proyecto_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+.proyecto_info h3,
+p {
+    padding: .5rem;
+    text-align: center;
+}
+
+.proyecto_button {
+    border-color: white;
+    width: 150px;
+    border-radius: 2rem;
+    padding: .5rem;
+    font-family: inherit;
+    font-size: large;
+}
+
+/*SECCIÓN CONTACTO*/
+.contacto {
+    grid-area: contacto;
+    background: darkgoldenrod;
+}
+
+.footer {
+    grid-area: foot;
+    background: darkgrey;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (width <=360px) {}
+
+@media (width <=782px) {
+    .formacion_carta {
+        flex-basis: auto;
+        flex-grow: 1;
+    }
+
+}
+
+
+@media (width <=1440px) {}
