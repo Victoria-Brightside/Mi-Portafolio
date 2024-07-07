@@ -398,10 +398,13 @@ button:active {
 
 @media (width <=782px) {
     .formacion_carta {
-        flex-basis: auto;
-        flex-grow: 1;
+        flex-wrap: wrap;
     }
 
+    .habilidades, .blandas, .pasatiempos{
+        
+        flex-wrap: wrap; ;
+    }
 }
 
 
